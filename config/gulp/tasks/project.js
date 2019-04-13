@@ -25,6 +25,6 @@ gulp.task('project::build', ['project::js', 'project::css', 'project::sass'], fu
     if(config.length > 1) {
         console.log("Projects static files compiled!".green);
     } else {
-        console.log(("Project files compiled!").green);
+        console.log(("Project " + config[0].name + " files compiled!").green);
     }
 });

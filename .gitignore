@@ -20,3 +20,8 @@
 ###> node ###
 node_modules
 ###< node ###
+
+###> Compiled JS & CSS ###
+/public/static/projects/
+/public/static/plugins/
+###< Compiled JS & CSS ###

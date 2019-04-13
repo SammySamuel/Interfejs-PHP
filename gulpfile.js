@@ -3,20 +3,12 @@ const runSequence = require('run-sequence');
 const requireDir = require('require-dir');
 const config = require('./config/gulp/config/gulpconfig');
 
-/**
- * Compile SASS/LESS/CSS files for selected project
- * @param --name
- * @example gulp project --name mailer
- */
+// Compile SASS/LESS/CSS files for selected project
 gulp.task('project', function(cb) {
     return runSequence('project::clean', ['project::check', 'project::build', 'concatenator::make'], cb);
 });
 
-/**
- * Watch all file changes
- * @param none
- * @example gulp project::watch
- */
+// Watch all file changes
 gulp.task('project::watch', ['project::js', 'project::css', 'project::sass'], function() {
 
     gulp.watch(config.projects.js.watch, ['project::js']).on('change', function (file) {
@@ -31,7 +23,5 @@ gulp.task('project::watch', ['project::js', 'project::css', 'project::sass'], fu
 
 });
 
-/**
- * Other tasks...
- */
+//Other tasks
 requireDir('./config/gulp/tasks', { recurse: true });

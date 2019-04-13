@@ -1,7 +1,7 @@
 const config = require('../config/gulpconfig').project;
 const es = require('event-stream');
-const compile = require('./compile');
-const helper = require('./helper');
+const compile = require('../functions/compile');
+const helper = require('../functions/helper');
 
 function buildJSTask(projectConfig) {
     return compile.compileJS(projectConfig.js, projectConfig.name);
@@ -21,6 +21,7 @@ function buildConcatFilesTask(options) {
 function buildConcatCSSFilesTask(options) {
     return compile.concatCSSFiles(options);
 }
+
 function moveFiles(options) {
     return compile.moveFiles(options);
 }

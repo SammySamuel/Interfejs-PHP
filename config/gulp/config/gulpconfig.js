@@ -2,7 +2,7 @@ const readirSync = require('fs').readdirSync;
 const argv = require('yargs').argv;
 const root        = "templates/static/";
 const destination = "public/static/";
-const pluginsRoot = "node_modules/";
+const pluginsRoot = "packages/assets/node_modules/";
 const plugins     = destination + "plugins/";
 const theme       = destination + "theme/";
 const projectName = (typeof argv.name === "undefined") ? readirSync(root + 'projects') : argv.name;
@@ -39,8 +39,7 @@ const config = {
             type: "js",
             src: [
                 plugins + "jquery/dist/jquery.min.js",
-                plugins + "jquery-migrate/dist/jquery-migrate.min.js",
-                plugins + "bootstrap/dist/js/bootstrap.js"
+                plugins + "bootstrap/dist/js/bootstrap.min.js",
             ]
         },
         {
@@ -48,9 +47,10 @@ const config = {
             outputName: "components.min.css",
             type: "css",
             src: [
-                plugins + "font-awesome/css/font-awesome.min.css"
+                plugins + "font-awesome/css/font-awesome.min.css",
+                plugins + "bootstrap/dist/css/bootstrap.min.css"
             ]
-        },
+        }
     ]
 };
 if(Array.isArray(projectName)) {

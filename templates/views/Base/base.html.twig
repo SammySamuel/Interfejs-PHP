@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <link href="{{ asset('static/plugins/components.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('static/projects/core_basic/css/core_basic.compiled.min.css') }}" rel="stylesheet" type="text/css"/>
     <script src="{{ asset('static/plugins/components.min.js') }}"></script>
 </head>
 <body>
-{% include '@App/Base/navigation.html.twig'%}
+{% include '@App/Base/navigation.html.twig' %}
 {% block body %}{% endblock %}
+{% include '@App/Base/footer.html.twig' %}
+
 {% block javascripts %}{% endblock %}
 </body>
 </html>

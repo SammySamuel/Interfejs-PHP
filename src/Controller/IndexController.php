@@ -20,5 +20,4 @@ class IndexController extends CoreController
     {
         return $this->renderWithData('@App/Main/index.html.twig');
     }
-
 }

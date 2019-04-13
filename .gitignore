@@ -14,6 +14,7 @@
 
 ###> phpstorm ###
 .idea
+.idea/workspace.xml
 ###< phpstorm ###
 
 ###> node ###

@@ -21,5 +21,8 @@ gulp.task('project::watch', ['project::js', 'project::css', 'project::sass'], fu
     }));
 });
 
+// Default
+gulp.task( 'default', [ 'project' ] );
+
 //Other tasks
 requireDir('./gulp/tasks', {recurse: true});

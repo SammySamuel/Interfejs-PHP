@@ -1,0 +1,47 @@
+{
+  "name": "samuel_interface",
+  "version": "1.0.0",
+  "description": "Samuel Stefanski",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build-assets": "cd packages/assets && yarn install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SammySamuel/Interfejs-PHP.git"
+  },
+  "private": true,
+  "author": "Samuel Stefanski",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-es2017": "6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "colors": "1.1.2",
+    "event-stream": "3.3.4",
+    "gulp": "3.9.1",
+    "gulp-babel": "7.0.0",
+    "gulp-clean": "0.3.2",
+    "gulp-clean-css": "3.0.4",
+    "gulp-concat": "2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-directory-sync": "^1.2.3",
+    "gulp-ext-replace": "0.3.0",
+    "gulp-folders": "1.1.0",
+    "gulp-if": "2.0.2",
+    "gulp-minify": "0.0.15",
+    "gulp-sass": "3.1.0",
+    "gulp-sort": "^2.0.0",
+    "gulp-uglify": "2.1.2",
+    "pump": "1.0.2",
+    "readdir-recursive": "0.0.4",
+    "require-dir": "0.3.2",
+    "run-sequence": "1.2.2",
+    "yargs": "latest"
+  },
+  "dependencies": {
+    "stomp-websocket-js": "^1.0.0"
+  }
+}

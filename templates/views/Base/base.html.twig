@@ -13,7 +13,14 @@
 {% include '@App/Base/navigation.html.twig' %}
 {% block body %}{% endblock %}
 {% include '@App/Base/footer.html.twig' %}
-
+{{ dump(SMOCZEK) }}
+{% for i in SMOCZEK %}
+    Cesć jestem {{ i }}
+{% endfor %}
+{% if SMOCZEK is not empty %}
+NIE JESTEM PUSTY
+{% endif %}
+{{ user }}
 {% block javascripts %}{% endblock %}
 </body>
 </html>
